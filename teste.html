@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redes de Computador</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+  <style>
+    .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  }
+  .button {
+  position: relative;
+  background-color: transparent;
+  color: #e8e8e8;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 150px;
+  height: 60px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button::before {
+  content: "Bora!";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: translate(0%,90%);
+  z-index: 99;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button.active::before {
+  content: "Está aqui";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(135deg,#196e55,#2CB67D );
+  transform: translate(0%,90%);
+  z-index: 99;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button::after {
+  content: "Home";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform-origin: top;
+  transform: translate(0%,-100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+  transform: translate(0%,0%);
+}
+
+.button:hover::after {
+  transform: translate(0%,-200%);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  scale: 0.95;
+}
+
+
+    :root {
+      --button-content-home: 'Home';
+      --button-content-internet: 'Internet';
+      --button-content-services: 'Services';
+      --button-content-contact: 'Contact';
+    }
+
+    .N1::after {
+      content: var(--button-content-home);
+    }
+
+    .N2::after {
+      content: var(--button-content-internet);
+    }
+
+    .N3::after {
+      content: var(--button-content-services);
+    }
+
+    .N4::after {
+      content: var(--button-content-contact);
+    }
+    .custom-logo{
+      min-height: 50px;
+      max-height: 100px;
+      height: 10vw;
+        background-color: #000000c4;
+        border-radius: 50pt;
+    }
+    .bg-dark{
+        background-color: #000000c4 !important;
+    }
+    .animation{
+    width: 500px;
+  }
+  #redes{
+    height: 35vw;
+  }
+  .show button{
+    margin-top: 20px;
+  }
+  @media (max-width: 767px) {
+    .animation{
+      justify-content: center; 
+  align-items: center; 
+  width: 100vw;
+    }
+    #redes{
+    padding-top: 10vh;
+  }
+    }
+  </style>
+</head>
+<body class="bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
+    <div class="container m-0">
+      <a class="navbar-brand" href="#">
+        <img class="bg-dark custom-logo" src="./hux/logo-nav.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class="N1 button active"></button>
+          </li>
+          <li class="nav-item">
+            <button class="N2 button"></button>
+          </li>
+          <li class="nav-item">
+            <button class="N3 button"></button>
+          </li>
+          <li class="nav-item">
+            <button class="N4 button"></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="">
+    <div class="row">
+        <div class="col d-flex align-items-center justify-content-center" id="redes">
+            <h1 class="text-white fs-50">Redes de <br> Computadores</h1>
+         </div>
+        <div class="col">
+        <dotlottie-player class="animation" src="./hux/netAnima.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+          <div class="bg-white" style="border-radius: 50px 50px 0 0;">
+            <div class="container">
+              <h1 class="text-center">Internet</h1>
+              <p class="text-center">Sistema global de redes de computadores interligadas baseadas no modelo TCP/IP, protocolos e infraestrutura física, a fim de servir usuários por meio do compartilhamento de informações e do acesso a recursos e serviços online mundiais.
+                  Assim, através da interconexão de redes menores em uma escala global, os dados dividem-se em pacotes e são roteados por meio de servidores e roteadores até alcançarem seu destino.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
