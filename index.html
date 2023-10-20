@@ -215,6 +215,7 @@
 
     body{
       overflow-x: hidden;
+      width: 100%;
     }
 
     @media (max-width: 767px) {
@@ -341,10 +342,42 @@
               <br/>
               Este modelo é composto por 4 camadas independentes que garantem a integridade e a entrega adequada dos dados trafegados do que será executado na camada superior.
           </div>
+          <div class="d-flex justify-content-center">
+            <div>
+              <img src="./hux/image6.png" usemap="#image-map" alt="Imagem TCP/IP" class="maparea" style="height: 600px; width: 1320px;">
+              <map name="image-map" id="image-map">
+                <area data-bs-toggle="modal" data-bs-target="#exampleModal" class="area1" coords="512,50,552,50,559,62,561,209,547,216,510,216,498,204,500,62" shape="poly">
+                <area class="area2" coords="606,52,646,52,653,64,655,211,641,218,604,218,592,206,594,64" shape="poly">
+                <area class="area3" coords="696,50,736,50,743,62,745,209,731,216,694,216,682,204,684,62" shape="poly">
+                <area class="area4" coords="785,52,825,52,832,64,834,211,820,218,783,218,771,206,773,64" shape="poly">
+                <area class="area4" coords="514,378,554,378,561,390,563,537,549,544,512,544,500,532,502,390" shape="poly">
+                <area class="area3" coords="604,378,644,378,651,390,653,537,639,544,602,544,590,532,592,390" shape="poly">
+                <area class="area2" coords="691,376,730,378,742,387,741,535,728,544,693,544,681,532,681,390" shape="poly">
+                <area class="area1" coords="785,376,824,378,836,387,835,535,822,544,787,544,775,532,775,390" shape="poly">
+              </map>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-danger text-white">
+                    <div class="modal-header">
+                      <img src="./hux/logoRede.png" alt="" style="height: 50px;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Acesso à Rede</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Primeira camada do modelo TCP/IP é responsável pela comunicação entre a rede física e as camadas superiores, definindo especificações para transmissão de bits sobre o meio físico por meio do encapsulamento dos dados transmitidos e do endereçamento MAC.
+                      Principais protocolos envolvidos: Ethernet, ARP, Wi-fi, entre outros.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script>
+   <script>
       function toggleActive(card) {
         const cards = document.querySelectorAll('.card-custom');
         cards.forEach(card => {
@@ -367,6 +400,50 @@
         blockTitle.textContent = title;
         blockContent.innerHTML = content;
       }
+
+      $(function() {
+         // Apply the Maphilight plugin to the image map
+         $(document).ready(function () {
+    // Apply the Maphilight plugin to the image map
+    $('img[usemap]').maphilight({
+        fillColor: 'FFFFFF',  // Default fill color
+        fillOpacity: 0.5,     // Default fill opacity (adjust as needed)
+    });
+
+    // Set different fill colors for specific areas
+    $('.area1').data('maphilight', { fillColor: 'FF0000', fade: true, stroke: false});
+$('.area3').data('maphilight', { fillColor: '0000FF', fade: true, stroke: false });
+$('.area4').data('maphilight', { fillColor: 'FFFF00', fade: true, stroke: false });
+$('.area2').data('maphilight', { fillColor: '00FF00', fade: true, stroke: false });
+
+
+    // Initialize the maphilight plugin
+    $('img[usemap]').maphilight();
+
+    // Handle mouseover events to change fill color and opacity on hover
+    $('area[data-maphilight]').mouseover(function () {
+        var areaFillColor = $(this).data('fillColor');
+        if (areaFillColor) {
+            $('img[usemap]').maphilight({
+                fillColor: areaFillColor,
+                fillOpacity: 0.5,
+                toolTip: true,
+            });
+        }
+    });
+
+    // Handle mouseout events to reset fill color and opacity
+    $('area[data-maphilight]').mouseout(function () {
+        $('img[usemap]').maphilight({
+            fillColor: 'FFFFFF',  // Reset to default fill color
+            fillOpacity: 0.5      // Reset to default fill opacity
+        });
+    });
+});
+
+      });
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
   </body>
 </html>
