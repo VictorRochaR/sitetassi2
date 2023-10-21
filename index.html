@@ -404,10 +404,6 @@
                   </p>
                   <p class="card__description" style="text-align: justify;">
                     Todos os equipamentos compartilham uma única conexão para se comunicar - de maneira bidirecional - uma falha no cabo pode afetar o sinal elétrico da rede e comprometer toda a estrutura, sendo muito vulnerável a problemas. Quem emite a mensagem avalia a fila de entrega da estrutura e, uma vez vazia é iniciada a transmissão - visto que apenas um equipamento é permitido transmitir por vez.
-                    <br><br>
-                    Considerando que os dados passam pelo cabo que todos estão conectados, permite que todos os dispositivos  visualizem a mensagem, mas apenas o destinatário é capaz de processar a informação.
-                    <br><br>
-                    A topologia de Barramento é geralmente utilizada em pequenas estruturas com poucos equipamentos, como escritórios ou laboratórios - os quais utilizam redes locais devido ao baixo custo e praticidade de instalação e manutenção.
                   </p>
                 </div>
               </div>
@@ -425,9 +421,7 @@
                   <p class="card__description" style="text-align: justify;">
                     Todos os dispositivos são conectados em formato circular através de um circuito fechado (ligados pelas pontas), seguindo os mesmos problemas da rede de barramento, ou seja, uma falha em uma máquina interrompe a comunicação total da rede.
                     <br><br>
-                    Esta topologia permite que apenas um dispositivo comunique por vez e, na variação da rede anel o dispositivo com posse do token ring transmite dados de maneira unidirecional para todos os outros e, caso estes não forem o destinatário, repassa para o dispositivo ao lado - ao terminar a transmissão, o token é recolocado na rede.
-                    <br><br>
-                    A rede anel tem uma utilização parecida que a de barramento, porém por ter mais confiabilidade, acaba sendo utilizada em sistemas nos quais se torna necessária a comunicação garantida, como em redes de metrôs e ferrovias - onde os sinais de controle e monitoramento são transmitidos ao longo de um anel para coordenar a operação dos trens e garantir que eles não colidam.
+                    Esta topologia permite que apenas um dispositivo comunique por vez e, na variação da rede anel o dispositivo com posse do token ring transmite dados de maneira unidirecional para todos os outros.
                   </p>
                 </div>
               </div>
@@ -446,10 +440,7 @@
                     Neste tipo de rede, os dispositivos são conectados a um ponto central, mas não diretamente entre si, isto é, quando um dispositivo envia dados, estes são transmitidos para o hub ou switch central e, em seguida, encaminhados para o dispositivo destinatário.
                     <br><br>
                     A topologia em Estrela também possui a variação conhecida como Estrela Estendida, a qual conecta várias estrelas entre si ao hub central por meio de suas ramificações, permitindo ainda mais conexões em apenas uma estrutura.
-                    <br><br>
-                    Desta forma, é considerada como um tipo de rede confiável, visto que, caso um equipamento - fora o ponto central - falhe, este não comprometerá a comunicação e, se um cabo for rompido apenas a comunicação do dispositivo conectado a ele será interrompida.
-                    <br><br>
-                    Um exemplo claro da Estrela são as redes domésticas, nas quais há um roteador como ponto central e equipamentos conectados a ele (via cabo ou Wifi).
+        
                   </p>
                 </div>
               </div>
@@ -466,11 +457,7 @@
                   </p>
                   <p class="card__description">
                     A topologia mesh, também conhecida como malha é uma estrutura onde todos os dispositivos estão conectados entre si, garantindo que independente qual ponto ou equipamento tenha falha, a comunicação será estabelecida. Nessa topologia existem malhas completas (todos os dispositivos se conectam a todos os outros dispositivos) e malhas parciais (apenas alguns dispositivos se conectam a todos os outros).
-                  <br><br>
-                  Suas desvantagens estão no custo, mobilidade e escalabilidade, considerando que para cada equipamento adicionado é necessário conectar com todos os outros na estrutura, mas a vantagem certamente está na confiança de comunicação, pois se uma das conexões é cortada, o sistema no geral não é afetado pois há outras conexões para o transporte de dados.
-                  <br><br>
-                  É uma topologia usada em ambientes específicos que necessitam da garantia de comunicação constante, como por exemplo um Data Center de uma empresa, considerando que se ele parar por um tempo, o menor que seja, toda a empresa é afetada.
-                </p>
+                  </p>
                 </div>
               </div>
             </div>
@@ -486,9 +473,7 @@
                   <p class="card__description" style="text-align: justify;">
                     De forma resumida se trata de mais de uma topologia em conjunto, havendo um ponto central (hub ou switch) que conecta duas ou mais topologias físicas distintas - ou seja, os padrões de conexão variam de acordo com a necessidade do cliente.
                   <br><br>
-                  A topologia Híbrida apresenta algumas desvantagens, como a complexidade de implementação, considerando que é necessário um planejamento até a aplicação - isso porque se um dispositivo for conectado de forma errada, pode afetar o sistema todo - outro problema seria a possibilidade de incompatibilidade dos equipamentos com a forma de conexão - considerando, por exemplo, que uma parte da rede pode ser baseada em uma topologia em estrela que requer comutadores, enquanto outra parte pode ser em anel, que requer dispositivos de rede diferentes.
-                  <br><br>
-                  A sua utilização surge da demanda de adaptar a necessidade da estratégia de negócio e de aproveitar o custo/benefício entre as topologias envolvidas. Por exemplo: uma grande empresa que possui diferentes departamentos com requisitos diferentes de rede, onde um setor teria um custo-benefício maior se fosse feito em topologia de estrela e o setor da TI tendo um Data Center que precisa da topologia de malha, com um laboratório que seria mais vantajoso ter uma topologia de barramento.
+                  A topologia Híbrida apresenta algumas desvantagens, como a complexidade de implementação e a possibilidade de incompatibilidade dos equipamentos com a forma de conexão.
                   </p>
                 </div>
               </div>
@@ -523,8 +508,13 @@
         </div>
       </div>
 
-      <div class="row d-flex align-items-center justify-content-center">
+      <div class="row d-flex align-items-center justify-content-center text-center">
         <img src="./hux/logoCatolica.png" alt="" style="height: 168x; width: 289px; margin-top: 30px; margin-bottom: 0;">
+        <a href="https://www.flaticon.com/free-icons/ethernet" title="ethernet icons">Ethernet icons created by juicy_fish - Flaticon</a><br/>
+        <a href="https://www.flaticon.com/free-icons/internet" title="internet icons">Internet icons created by Freepik - Flaticon</a><br/>
+        <a href="https://www.flaticon.com/free-icons/transportation" title="transportation icons">Transportation icons created by Freepik - Flaticon</a><br/>
+        <a href="https://www.flaticon.com/free-icons/mouse-clicker" title="mouse clicker icons">Mouse clicker icons created by Freepik - Flaticon</a><br/>
+        <a href="https://lottiefiles.com" title="Computer animation">Computer animation by Preecher</a>
       </div>
     </footer>
 
