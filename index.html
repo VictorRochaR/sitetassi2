@@ -94,9 +94,9 @@
 
     :root {
       --button-content-home: 'Home';
-      --button-content-internet: 'Internet';
-      --button-content-services: 'Services';
-      --button-content-contact: 'Contact';
+      --button-content-internet: 'Topologia';
+      --button-content-services: 'Modelo Osi';
+      --button-content-contact: 'Modelo TCP/IP';
     }
 
     .N1::after {
@@ -104,15 +104,15 @@
     }
 
     .N2::after {
-      content: var(--button-content-internet);
-    }
-
-    .N3::after {
       content: var(--button-content-services);
     }
 
-    .N4::after {
+    .N3::after {
       content: var(--button-content-contact);
+    }
+
+    .N4::after {
+      content: var(--button-content-internet);
     }
 
     .custom-logo{
@@ -321,23 +321,23 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <button class="N1 button active"></button>
+              <button class="N1 button active" onclick="scrollToSection('home', 100)"></button>
             </li>
             <li class="nav-item">
-              <button class="N2 button"></button>
+              <button class="N2 button" onclick="scrollToSection('camadas', 100)"></button>
             </li>
             <li class="nav-item">
-              <button class="N3 button"></button>
+              <button class="N3 button" onclick="scrollToSection('camadasTcp', 100)"></button>
             </li>
             <li class="nav-item">
-              <button class="N4 button"></button>
+              <button class="N4 button" onclick="scrollToSection('topolog', 100)"></button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div>
+    <div id="home">
       <div class="row">
           <div class="col d-flex align-items-center justify-content-center row-size" id="redes">
               <h1 class="text-white redes">Redes de <br> Computadores</h1>
@@ -397,7 +397,7 @@
             </div>
       </div>
 
-        <div class="col bg-white">
+        <div class="col bg-white" id="camadasTcp">
           <div class="container net">
             <h1 class="text-center">TCP/IP</h1>
             <p class="text-center" style="font-size: 24px;">
@@ -481,7 +481,7 @@
           </div>
         </div>
 
-        <div>
+        <div id="topolog">
           <h1 class="text-center text-white" style="margin-top: 100px; margin-bottom: 50px; font-size: 70px;"> Topologias de Rede </h1>
           <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
@@ -619,6 +619,21 @@ $('.area2').data('maphilight', { fillColor: '00FF00', fade: true, stroke: false 
 });
 
       });
+      function scrollToSection(sectionId, offset) {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+        const offsetPosition = section.offsetTop - offset;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+
+
+
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
