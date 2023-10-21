@@ -218,6 +218,69 @@
       width: 100%;
     }
 
+    .card-img {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-img svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-img:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card-img:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+
     @media (max-width: 767px) {
       .block-title{
       font-size: 28px;
@@ -346,16 +409,16 @@
             <div>
               <img src="./hux/image6.png" usemap="#image-map" alt="Imagem TCP/IP" class="maparea" style="height: 600px; width: 1320px;">
               <map name="image-map" id="image-map">
-                <area data-bs-toggle="modal" data-bs-target="#exampleModal" class="area1" coords="512,50,552,50,559,62,561,209,547,216,510,216,498,204,500,62" shape="poly">
-                <area class="area2" coords="606,52,646,52,653,64,655,211,641,218,604,218,592,206,594,64" shape="poly">
-                <area class="area3" coords="696,50,736,50,743,62,745,209,731,216,694,216,682,204,684,62" shape="poly">
-                <area class="area4" coords="785,52,825,52,832,64,834,211,820,218,783,218,771,206,773,64" shape="poly">
-                <area class="area4" coords="514,378,554,378,561,390,563,537,549,544,512,544,500,532,502,390" shape="poly">
-                <area class="area3" coords="604,378,644,378,651,390,653,537,639,544,602,544,590,532,592,390" shape="poly">
-                <area class="area2" coords="691,376,730,378,742,387,741,535,728,544,693,544,681,532,681,390" shape="poly">
-                <area class="area1" coords="785,376,824,378,836,387,835,535,822,544,787,544,775,532,775,390" shape="poly">
+                <area data-bs-toggle="modal" data-bs-target="#modalRede" class="area1" coords="512,50,552,50,559,62,561,209,547,216,510,216,498,204,500,62" shape="poly">
+                <area data-bs-toggle="modal" data-bs-target="#modalInter" class="area2" coords="606,52,646,52,653,64,655,211,641,218,604,218,592,206,594,64" shape="poly">
+                <area data-bs-toggle="modal" data-bs-target="#modalTrans" class="area3" coords="696,50,736,50,743,62,745,209,731,216,694,216,682,204,684,62" shape="poly">
+                <area data-bs-toggle="modal" data-bs-target="#modalAplic" class="area4" coords="785,52,825,52,832,64,834,211,820,218,783,218,771,206,773,64" shape="poly">
+                <area data-bs-toggle="modal" data-bs-target="#modalAplic" class="area4" coords="514,378,554,378,561,390,563,537,549,544,512,544,500,532,502,390" shape="poly">
+                <area data-bs-toggle="modal" data-bs-target="#modalTrans" class="area3" coords="604,378,644,378,651,390,653,537,639,544,602,544,590,532,592,390" shape="poly">
+                <area data-bs-toggle="modal" data-bs-target="#modalInter" class="area2" coords="691,376,730,378,742,387,741,535,728,544,693,544,681,532,681,390" shape="poly">
+                <area data-bs-toggle="modal" data-bs-target="#modalRede" class="area1" coords="785,376,824,378,836,387,835,535,822,544,787,544,775,532,775,390" shape="poly">
               </map>
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id="modalRede" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content bg-danger text-white">
                     <div class="modal-header">
@@ -370,9 +433,123 @@
                   </div>
                 </div>
               </div>
+              <div class="modal fade" id="modalInter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-success text-white">
+                    <div class="modal-header">
+                      <img src="./hux/logoInter.png" alt="" style="height: 50px;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Internet ou Inter-Rede</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Realiza o roteamento dos pacotes de dados - transmissão de sinais elétricos - entre redes distintas e gerencia endereços IP, determinando a melhor rota para a entrega dos dados.
+                      Principais protocolos envolvidos: IP, ARP, RIP, entre outros.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="modalTrans" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-primary text-white">
+                    <div class="modal-header">
+                      <img src="./hux/logoTrans.png" alt="" style="height: 50px;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Transporte</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Garante a entrega correta e ordenada dos dados entre os diferentes hosts envolvidos, por meio dos protocolos UDP – controle de fluxo de informações - e TCP – entrega rápida e eficiente dos dados. 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="modalAplic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-warning text-white">
+                    <div class="modal-header">
+                      <img src="./hux/logoAplic.png" alt="" style="height: 50px;">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Aplicação</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Por conter todos os protocolos de nível mais alto, esta última camada executa a interação humano-máquina, fornecendo a interface do software para aplicativos e serviços utilizados pelos usuários finais.
+                      Principais protocolos envolvidos: HTTP(S), FTP, DNS, entre outros.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <div>
+          <h1 class="text-center text-white" style="margin-top: 100px; margin-bottom: 50px; font-size: 70px;"> Topologias de Rede </h1>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-center"> 
+                  <div class="card-img" style="width: 800px; height: 400px;margin: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                    <div class="card__content">
+                      <p class="card__title">Um</p>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center"> 
+                  <div class="card-img" style="width: 800px; height: 400px;margin: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                    <div class="card__content">
+                      <p class="card__title">Dois</p>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center"> 
+                  <div class="card-img" style="width: 800px; height: 400px;margin: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                    <div class="card__content">
+                      <p class="card__title">Tres</p>
+                      <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <footer class="" style="margin-top: 50px; margin-bottom: 50px;">
+          <div class="row bg-black" style="padding: 30px;">
+            <div class="col d-flex align-items-center justify-content-center">
+              <img src="./hux/logo-nav.png" alt="Logo rodapé" style="height: 100px;">
+            </div>
+            <div class="col" style="width: 50vw;">
+              <p class="text-white">Instituição de Ensino: Católica de Santa Catarina <br/>
+                Disciplina: Redes de Computadores <br/>
+                Desenvolvedores: Arthur Hassuma, Laura Luchez e Victor Rocha</p>
+            </div>
+          </div>
+          <div class="row d-flex align-items-center justify-content-center">
+            <img src="./hux/logoCatolica.png" alt="" style="height: 168x; width: 289px; margin: 30px;">
+          </div>
+        </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
