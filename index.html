@@ -7,12 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <style>
-      .navbar {
-      display: flex;
-      justify-content: center;
-      background-color: transparent; /* Initial transparent background */
-      transition: background-color 0.3s ease-in-out; /* Smooth transition */
-      }
     .button {
       position: relative;
       background-color: transparent;
@@ -213,9 +207,12 @@
       font-size: 24px;
     }
 
+    html{
+      width: 100vw;
+    }
     body{
       overflow-x: hidden;
-      width: 100%;
+      width: 100vw;
     }
 
     .card-img {
@@ -282,6 +279,12 @@
 
 
     @media (max-width: 767px) {
+      .camadas{
+        width: 100vw;
+      }
+      #someDaq{
+        display: none;
+      }
       .block-title{
       font-size: 28px;
     }
@@ -310,8 +313,8 @@
   </head>
 
   <body class="bg-dark">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-navbar">
-      <div class="container m-0">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-navbar" style="width: 100vw;">
+      <div class="container">
         <a class="navbar-brand" href="#">
           <img class="bg-dark custom-logo" src="./hux/logo-nav.png" alt="Logo">
         </a>
@@ -361,9 +364,9 @@
       </div>
     </div>
   
-      <div class="row bg-dark" id="camadas">
-          <div class="col">
-            <div class="card-custom active">
+      <div class="row d-flex flex-wrap bg-dark" id="camadas">
+          <div class="col camadas">
+            <div class="card-custom active" id="">
               <h2 class="text-card" onclick="toggleActive(this)">Modelo Osi</h2>
             </div>
             <div class="card-custom">
@@ -406,7 +409,7 @@
               Este modelo é composto por 4 camadas independentes que garantem a integridade e a entrega adequada dos dados trafegados do que será executado na camada superior.
           </div>
           <div class="d-flex justify-content-center">
-            <div>
+            <div id="someDaq">
               <img src="./hux/image6.png" usemap="#image-map" alt="Imagem TCP/IP" class="maparea" style="height: 600px; width: 1320px;">
               <map name="image-map" id="image-map">
                 <area data-bs-toggle="modal" data-bs-target="#modalRede" class="area1" coords="512,50,552,50,559,62,561,209,547,216,510,216,498,204,500,62" shape="poly">
