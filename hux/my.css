@@ -293,10 +293,6 @@ a:hover{
   background-color: white;
 }
 @media (max-width: 767px) {
-  .bg-custom{
-    background-color: #16161A !important;
-    col
-  }
   .bg-purple{
     background-color: #8E4DF0 !important;
   }
