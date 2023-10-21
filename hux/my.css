@@ -285,15 +285,32 @@ a:hover{
   display: none;
 }
 
+#someDaq2{
+  display: none;
+}
+
 .navbar-toggler{
   background-color: white;
 }
 @media (max-width: 767px) {
+  .bg-custom{
+    background-color: #16161A !important;
+    col
+  }
+  .bg-purple{
+    background-color: #8E4DF0 !important;
+  }
+  #camadas{
+    display: none;
+  }
   .camadas{
     width: 100vw;
   }
   #someDaq{
     display: none;
+  }
+  #someDaq2{
+    display: block;
   }
   .block-title{
     font-size: 28px;

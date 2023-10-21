@@ -72,8 +72,128 @@
         </div>
       </div>
     </div>
+
+    <div class="accordion bg-dark" id="someDaq2" style="margin-bottom: 50px; margin-top: 50px;">
+      <!-- Modelo OSI -->
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-purple text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Modelo OSI
+              </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse bg-dark text-white show" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                  O modelo “Open System Interconnection” é um modelo de camadas de rede criado em 1984 pela ISO ('International Organization for Standardization') para proporcionar a interconexão de sistemas abertos, visando a interoperabilidade do sistema em questão.
+                  <br><br>
+                  No modelo OSI, os protocolos são agrupados em 7 camadas, iniciando sempre pela camada inferior.
+              </div>
+          </div>
+      </div>
+      <!-- Camada de Aplicação -->
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-purple text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  Aplicação
+              </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                  Por conter todos os protocolos de nível mais alto, esta última camada executa a interação humano-máquina, fornecendo a interface do software para aplicativos e serviços utilizados pelos usuários finais.
+                  <br><br>
+                  Principais protocolos envolvidos: HTTP(S), FTP, DNS, entre outros.
+              </div>
+          </div>
+      </div>
+      <!-- Camada de Apresentação -->
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-purple text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Apresentação
+              </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                  Além de gerenciar estruturas de dados abstratas, a camada de Apresentação utiliza protocolos para realizar a tradução e criptografia de dados das informações transmitidas, mantendo o foco na sintaxe e na semântica da rede.
+              </div>
+          </div>
+      </div>
+      <!-- Camada de Sessão -->
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-purple text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Sessão
+              </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                  Permite que os usuários realizem uma comunicação entre duas máquinas, além de proporcionar a sincronização de dados, o controle de diálogo e o gerenciamento de tokens – aumentando a eficiência da transmissão de dados.
+              </div>
+          </div>
+      </div>
+      <!-- Camada de Transporte -->
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-purple text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Transporte
+              </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                  Como o próprio nome sugere, esta camada do modelo OSI transporta dados entre duas máquinas distintas e controla o envio e recebimento dos pacotes – estes vindos da camada de Rede – garantindo a qualidade e a integridade dos dados.
+                  <br><br>
+                  Principais protocolos envolvidos: TCP, UDP, entre outros.
+              </div>
+          </div>
+      </div>
+      <!-- Camada de Rede -->
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-purple text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Rede
+              </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                  Responsável pela comunicação host-a-host e pelo roteamento de pacotes de dado por meio de uma ou mais redes, controlando a operação da sub-rede e gerenciando o tráfego de sistemas distintos.
+                  <br><br>
+                  Principais protocolos envolvidos: IP, RIP, ICMP, entre outros.
+              </div>
+          </div>
+      </div>
+      <!-- Camada de Enlace de Dados -->
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-purple text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Enlace de Dados
+              </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                  Além de gerenciar endereços MAC e evitar que dois dispositivos transmitam informações ao mesmo tempo por meio do CSMA-CD, esta camada realiza a detecção e correção de erros introduzidos pelo meio de transmissão. Assim, ela fiscaliza os dados e controla seu fluxo de envio a partir da transformação normal em uma linha que pareça livre de erros de transmissão, mascarando os erros reais de modo que a camada de rede não os veja.
+                  <br><br>
+                  Principais protocolos envolvidos: Ethernet, ARP, STP, entre outros.
+              </div>
+          </div>
+      </div>
+      <!-- Camada Física -->
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-purple text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Física
+              </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                  Define meios de transmissão para realizar a transmissão de dados brutos entre o dispositivo e o meio físico. Desta forma, ao receber uma informação do meio físico, ela converte o sinal em bits digitais e os encaminha à camada de Enlace de Dados - além de detectar erros na transmissão.
+                  <br><br>
+                  Principais protocolos envolvidos: Wi-fi, Bluetooth, HDMI, USB, entre outros.
+              </div>
+          </div>
+      </div>
+  </div>
   
-    <div class="row d-flex flex-wrap bg-dark" id="camadas">
+
+    <div class="row bg-dark" id="camadas">
       <div class="col camadas">
         <div class="card-custom active">
           <h2 class="text-card" onclick="toggleActive(0)"  title="Conceito - Modelo OSI ou ISOOSI" style="font-size: 50px; text-decoration: none;">Modelo Osi</h2>
@@ -124,6 +244,62 @@
       </div>
 
       <div class="d-flex justify-content-center">
+        <div class="accordion" id="someDaq2" style="margin-bottom: 50px;">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Acesso à Rede
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse bg-danger text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                Primeira camada do modelo TCP/IP é responsável pela comunicação entre a rede física e as camadas superiores, definindo especificações para transmissão de bits sobre o meio físico por meio do encapsulamento dos dados transmitidos e do endereçamento MAC.
+                <br><br>
+                Principais protocolos envolvidos: Ethernet, ARP, Wi-fi, entre outros.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Internet ou Inter-Rede
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse bg-success text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                Realiza o roteamento dos pacotes de dados - transmissão de sinais elétricos - entre redes distintas e gerencia endereços IP, determinando a melhor rota para a entrega dos dados.
+                <br><br>
+                Principais protocolos envolvidos: IP, ARP, RIP, entre outros.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Transporte
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse bg-primary text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                Garante a entrega correta e ordenada dos dados entre os diferentes hosts envolvidos, por meio dos protocolos UDP – controle de fluxo de informações - e TCP – entrega rápida e eficiente dos dados. 
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-warning text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Aplicação
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse bg-warning text-white" data-bs-parent="#someDaq2">
+              <div class="accordion-body">
+                Por conter todos os protocolos de nível mais alto, esta última camada executa a interação humano-máquina, fornecendo a interface do software para aplicativos e serviços utilizados pelos usuários finais.
+                <br><br>
+                Principais protocolos envolvidos: HTTP(S), FTP, DNS, entre outros.
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="someDaq">
           <img src="./hux/image6.png" usemap="#image-map" alt="Imagem TCP/IP" class="maparea" style="height: 600px; width: 1320px;">
           <map name="image-map" id="image-map">
@@ -137,7 +313,7 @@
             <area data-bs-toggle="modal" data-bs-target="#modalRede" class="area1" coords="785,376,824,378,836,387,835,535,822,544,787,544,775,532,775,390" shape="poly">
           </map>
 
-          <div class="modal fade" id="modalRede" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"">
+          <div class="modal fade" id="modalRede" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content bg-danger text-white">
                 <div class="modal-header">
@@ -158,7 +334,7 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content bg-success text-white">
                 <div class="modal-header">
-                  <img src="./hux/logoInter.png" alt="" style="height: 50px;"">
+                  <img src="./hux/logoInter.png" alt="" style="height: 50px;">
                   <h1 class="modal-title fs-5" id="exampleModalLabel" style="text-indent: 10px;">Internet ou Inter-Rede</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
