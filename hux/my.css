@@ -1,306 +1,315 @@
+@charset "UTF-8";
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
 .button {
-    position: relative;
-    background-color: transparent;
-    color: #e8e8e8;
-    font-size: 17px;
-    font-weight: 600;
-    border-radius: 10px;
-    width: 150px;
-    height: 60px;
-    border: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-  }
+  position: relative;
+  background-color: transparent;
+  color: #e8e8e8;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 150px;
+  height: 60px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
 
-  .button::before {
-    content: "Bora!";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    transform: translate(0%,90%);
-    z-index: 99;
-    position: relative;
-    transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  }
+.button::before {
+  content: "Clique!";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform: translate(0%,90%);
+  z-index: 99;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
 
-  .button.active::before {
-    content: "Está aqui";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(135deg,#196e55,#2CB67D );
-    transform: translate(0%,90%);
-    z-index: 99;
-    position: relative;
-    transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  }
+.button.active::before {
+  content: "Está aqui";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(135deg,#196e55,#2CB67D );
+  transform: translate(0%,90%);
+  z-index: 99;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
 
-  .button::after {
-    content: "Home";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    transform-origin: top;
-    transform: translate(0%,-100%);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  }
+.button::after {
+  content: "Home";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transform-origin: top;
+  transform: translate(0%,-100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
 
-  .button:hover::before {
-    transform: translate(0%,0%);
-  }
+.button:hover::before {
+  transform: translate(0%,0%);
+}
 
-  .button:hover::after {
-    transform: translate(0%,-200%);
-  }
+.button:hover::after {
+  transform: translate(0%,-200%);
+}
 
-  .button:focus {
-    outline: none;
-  }
+.button:focus {
+  outline: none;
+}
 
-  .button:active {
-    scale: 0.95;
-  }
-
-
-  :root {
-    --button-content-home: 'Home';
-    --button-content-internet: 'Topologia';
-    --button-content-services: 'Modelo Osi';
-    --button-content-contact: 'Modelo TCP/IP';
-  }
-
-  .N1::after {
-    content: var(--button-content-home);
-  }
-
-  .N2::after {
-    content: var(--button-content-services);
-  }
-
-  .N3::after {
-    content: var(--button-content-contact);
-  }
-
-  .N4::after {
-    content: var(--button-content-internet);
-  }
-
-  .custom-logo{
-    min-height: 50px;
-    max-height: 100px;
-    height: 10vw;
-      background-color: #000000c4;
-      border-radius: 50pt;
-  }
-
-  .bg-dark{
-      background-color: #16161A !important;
-  }
-
-  .animation{
-    width: 90%;
-    height: 90%;
-    margin-top: 15vh;
-  }
-  #redes{
-    height: 35vw;
-  }
-
-  .show button{
-    margin-top: 20px;
-  }
-
-  .text-purple{
-    font-weight: bold;
-    color: #8E4DF0;
-    text-decoration: none;
-  }
+.button:active {
+  scale: 0.95;
+}
 
 
-  .net{
-    padding: 50px;
-  }
+:root {
+  --button-content-home: 'Home';
+  --button-content-internet: 'Topologia';
+  --button-content-services: 'Modelo Osi';
+  --button-content-contact: 'Modelo TCP/IP';
+}
 
-  .bg-navbar{
-    background-color: #0000006e !important;
-  }
+.N1::after {
+  content: var(--button-content-home);
+}
 
-  .row-size{
-    height: 50vh;
-  }
+.N2::after {
+  content: var(--button-content-services);
+}
 
-  .redes{
-    font-size: 5vw;
-  }
-  
-  #camadas{
-    margin-top: 5vh;
-  }
+.N3::after {
+  content: var(--button-content-contact);
+}
 
-  .card-custom{
-    background-color: #8E4DF0;
-    color: white;
-    width: 70%;
-    border-radius: 0 30px 0 0;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-  }
+.N4::after {
+  content: var(--button-content-internet);
+}
 
-  .text-card{
-    margin-left: 20px;
-    font-size: 64px;
-    padding: 10px;
-  }
+.custom-logo{
+  min-height: 50px;
+  max-height: 100px;
+  height: 10vw;
+  background-color: #000000c4;
+  border-radius: 50pt;
+}
 
-  .card-custom.active{
-    width: 90%;
-    background-color: #552B93;
-    border-radius: 0 30px 30px 0;
-  }
+.bg-dark{
+  background-color: #16161A !important;
+}
 
-  .card-custom:hover{
-    width: 95%;
-    background-color: #8563b6;
-  }
+.animation{
+  width: 90%;
+  height: 90%;
+  margin-top: 15vh;
+}
+#redes{
+  height: 35vw;
+}
 
-  .info-block{
-    color: white;
-  }
+.show button{
+  margin-top: 20px;
+}
 
-  .inside-block {
-    border-left: 5px solid #8E4DF0;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 10px;
-  }
+.text-purple{
+  font-weight: bold;
+  color: #8E4DF0;
+  text-decoration: none;
+}
 
-  .block-title{
-    color: #8E4DF0;
-    font-size: 64px;
-    padding-bottom: 5%;
-  }
 
-  .block-content{
-    font-size: 24px;
-  }
+.net{
+  padding: 50px;
+}
 
-  html{
-    width: 100vw;
-  }
-  body{
-    overflow-x: hidden;
-    width: 100vw;
-  }
+.bg-navbar{
+  background-color: #0000006e !important;
+}
 
-  .card-img {
-position: relative;
-width: 300px;
-height: 200px;
-background-color: #f2f2f2;
-border-radius: 10px;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-perspective: 1000px;
-box-shadow: 0 0 0 5px #ffffff80;
-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.row-size{
+  height: 50vh;
+}
+
+.redes{
+  font-size: 5vw;
+}
+
+#camadas{
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+.card-custom{
+  background-color: #8E4DF0;
+  color: white;
+  width: 70%;
+  border-radius: 0 30px 0 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.text-card{
+  margin-left: 20px;
+  font-size: 64px;
+  padding: 10px;
+}
+
+.card-custom.active{
+  width: 90%;
+  background-color: #552B93;
+  border-radius: 0 30px 30px 0;
+}
+
+.card-custom:hover{
+  width: 95%;
+  background-color: #8563b6;
+}
+
+.info-block{
+  color: white;
+}
+
+.inside-block {
+  border-left: 5px solid #8E4DF0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 50px;
+  padding-right: 65px;
+}
+
+.block-title{
+  color: #8E4DF0;
+  font-size: 64px;
+  padding-bottom: 5%;
+}
+
+.block-content{
+  font-size: 24px;
+  text-align: justify;
+}
+
+html{
+  width: 100vw;
+}
+body{
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.card-img {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card-img svg {
-width: 48px;
-fill: #333;
-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card-img:hover {
-transform: scale(1.05);
-box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
 .card__content {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-padding: 20px;
-box-sizing: border-box;
-background-color: #f2f2f2;
-transform: rotateX(-90deg);
-transform-origin: bottom;
-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 a:hover{
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 .card-img:hover .card__content {
-transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 
 .card__title {
-margin: 0;
-font-size: 24px;
-color: #333;
-font-weight: 700;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
 }
 
 .card-img:hover svg {
-scale: 0;
+  scale: 0;
 }
 
 .card__description {
-margin: 10px 0 0;
-font-size: 14px;
-color: #777;
-line-height: 1.4;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
 }
 
 #more {display: none;}
-  @media (max-width: 767px) {
-    .camadas{
-      width: 100vw;
-    }
-    #someDaq{
-      display: none;
-    }
-    .block-title{
+@media (max-width: 767px) {
+  .camadas{
+    width: 100vw;
+  }
+  #someDaq{
+    display: none;
+  }
+  .block-title{
     font-size: 28px;
   }
-    .block-content{
+  .block-content{
     font-size: 18px;
   }
-    .text-card{
+  .text-card{
     font-size: 28px;
-    }
-    .animation{
-      justify-content: center; 
-      align-items: center; 
-      width: 100vw;
-      margin-top: 0;
-    }
-
-    #redes{
-      padding-top: 20vh;
-    }
-
-    .redes{
-      font-size: 10vw;
-    }
   }
+  .animation{
+    justify-content: center; 
+    align-items: center; 
+    width: 100vw;
+    margin-top: 0;
+  }
+
+  #redes{
+    padding-top: 20vh;
+  }
+
+  .redes{
+    font-size: 10vw;
+  }
+}

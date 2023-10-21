@@ -1,12 +1,36 @@
 const contentData = [
     {
         title: "Modelo Osi",
-        content: "O modelo “Open System Interconnection” é um modelo de camadas de rede criado in 1984 pela ISO ('International Organization for Standardization') para proporcionar a interconexão de sistemas abertos, visando a inoperabilidade do sistema em questão. <br /><br /> No modelo OSI, os protocolos são agrupados em 7 camadas, iniciando sempre pela camada inferior."
+        content: "O modelo “Open System Interconnection” é um modelo de camadas de rede criado in 1984 pela ISO ('International Organization for Standardization') para proporcionar a interconexão de sistemas abertos, visando a inoperabilidade do sistema em questão.<br/><br/>No modelo OSI, os protocolos são agrupados em 7 camadas, iniciando sempre pela camada inferior."
     },
     {
         title: "Aplicação",
-        content: "Esta última camada é responsável pelo consumo dos dados, executando a interação humano-máquina por meio de uma série de protocolos necessários para os usuários. <br /><br /> Principais protocolos envolvidos: HTTP, FTP, DNS, entre outros."
+        content: "Esta última camada é responsável pelo consumo dos dados, executando a interação humano-máquina por meio de uma série de protocolos necessários para os usuários.<br/><br/>Principais protocolos envolvidos: HTTP, FTP, DNS, entre outros."
     },
+    {
+        title: "Apresentação",
+        content: "Além de gerenciar estruturas de dados abstratas, a camada de Apresentação utiliza protocolos para realizar a tradução e criptografia de dados das informações transmitidas, mantendo o foco na sintaxe e na semântica da rede. "
+    },
+    {
+        title: "Sessão",
+        content: "Permite que os usuários realizem uma comunicação entre duas máquinas, além de proporcionar a sincronização de dados, o controle de diálogo e o gerenciamento de tokens – aumentando a eficiência da transmissão de dados.<br/><br/>Nesta camada, os protocolos dividem-se em: estabelecimento, gerenciamento e encerramento da sessão. "
+    },
+    {
+        title: "Transporte",
+        content: "Como o próprio nome sugere, esta camada do modelo OSI transporta dados entre duas máquinas distintas e controla o envio e recebimento dos pacotes – estes vindos da camada de Rede – garantindo a qualidade e a integridade dos dados.<br/><br/>Principais protocolos envolvidos: TCP, UDP, entre outros."
+    },
+    {
+        title: "Rede",
+        content: "Responsável pela comunicação host-a-host e pelo roteamento de pacotes de dado por meio de uma ou mais redes, controlando a operação da sub-rede e gerenciando o tráfego de sistemas distintos.<br/><br/>Principais protocolos envolvidos: IP, RIP, ICMP, entre outros."
+    },
+    {
+        title: "Enlace de Dados",
+        content: "Além de gerenciar endereços MAC e evitar que dois dispositivos transmitam informações ao mesmo tempo por meio do CSMA-CD, esta camada realiza a detecção e correção de erros introduzidos pelo meio de transmissão. Assim, ela fiscaliza os dados e controla seu fluxo de envio a partir da transformação normal em uma linha que pareça livre de erros de transmissão, mascarando os erros reais de modo que a camada de rede não os veja.<br/><br/>Principais protocolos envolvidos: Ethernet, ARP, STP, entre outros."
+    },
+    {
+        title: "Física",
+        content: "Define meios de transmissão para realizar a transmissão de dados brutos entre o dispositivo e o meio físico. Desta forma, ao receber uma informação do meio físico, ela converte o sinal em bits digitais e os encaminha à camada de Enlace de Dados - além detectar erros na transmissão.<br/><br/>Principais protocolos envolvidos: Wi-fi, Bluetooth, HDMI, USB, entre outros."
+    }
     // Add more data for other cards
 ];
 
