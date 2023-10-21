@@ -397,13 +397,13 @@
           <div class="carousel-item active">
             <div class="d-flex justify-content-center"> 
               <div class="card-img" style="width: 800px; height: 400px;margin: 50px;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                <img src="hux/barramento.jpg" alt="Barramento Linear - Imagem">
                 <div class="card__content" title="Topologia de Barramento Linear">
                   <p class="card__title">
                     Barramento Linear
                   </p>
-                  <p class="card__description">
-                    Todos os equipamentos compartilham uma única conexão para se comunicar – de maneira bidirecional - uma falha no cabo pode afetar o sinal elétrico da rede e comprometer toda a estrutura, sendo muito vulnerável a problemas. Quem emite a mensagem avalia a fila de entrega da estrutura e, uma vez vazia é iniciada a transmissão - visto que apenas um equipamento é permitido transmitir por vez.
+                  <p class="card__description" style="text-align: justify;">
+                    Todos os equipamentos compartilham uma única conexão para se comunicar - de maneira bidirecional - uma falha no cabo pode afetar o sinal elétrico da rede e comprometer toda a estrutura, sendo muito vulnerável a problemas. Quem emite a mensagem avalia a fila de entrega da estrutura e, uma vez vazia é iniciada a transmissão - visto que apenas um equipamento é permitido transmitir por vez.
                     <br><br>
                     Considerando que os dados passam pelo cabo que todos estão conectados, permite que todos os dispositivos  visualizem a mensagem, mas apenas o destinatário é capaz de processar a informação.
                     <br><br>
@@ -417,12 +417,12 @@
           <div class="carousel-item">
             <div class="d-flex justify-content-center"> 
               <div class="card-img" style="width: 800px; height: 400px; margin: 50px;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                <img src="hux/anel.jpg" alt="Anel - Imagem">
                 <div class="card__content" title="Topologia em Anel">
                   <p class="card__title">
                     Anel
                   </p>
-                  <p class="card__description">
+                  <p class="card__description" style="text-align: justify;">
                     Todos os dispositivos são conectados em formato circular através de um circuito fechado (ligados pelas pontas), seguindo os mesmos problemas da rede de barramento, ou seja, uma falha em uma máquina interrompe a comunicação total da rede.
                     <br><br>
                     Esta topologia permite que apenas um dispositivo comunique por vez e, na variação da rede anel o dispositivo com posse do token ring transmite dados de maneira unidirecional para todos os outros e, caso estes não forem o destinatário, repassa para o dispositivo ao lado - ao terminar a transmissão, o token é recolocado na rede.
@@ -437,12 +437,12 @@
           <div class="carousel-item">
             <div class="d-flex justify-content-center"> 
               <div class="card-img" style="width: 800px; height: 400px; margin: 50px;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                <img src="hux/estrela.jpg" alt="Estrela - Imagem">
                 <div class="card__content" title="Topologia em Estrela">
                   <p class="card__title">
                     Estrela
                   </p>
-                  <p class="card__description">
+                  <p class="card__description" style="text-align: justify;">
                     Neste tipo de rede, os dispositivos são conectados a um ponto central, mas não diretamente entre si, isto é, quando um dispositivo envia dados, estes são transmitidos para o hub ou switch central e, em seguida, encaminhados para o dispositivo destinatário.
                     <br><br>
                     A topologia em Estrela também possui a variação conhecida como Estrela Estendida, a qual conecta várias estrelas entre si ao hub central por meio de suas ramificações, permitindo ainda mais conexões em apenas uma estrutura.
@@ -459,7 +459,7 @@
           <div class="carousel-item">
             <div class="d-flex justify-content-center"> 
               <div class="card-img" style="width: 800px; height: 400px; margin: 50px;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                <img src="hux/mesh.jpg" alt="Malha - Imagem">
                 <div class="card__content" title="Topologia em Estrela">
                   <p class="card__title">
                     Malha
@@ -475,21 +475,20 @@
               </div>
             </div>
           </div>
-
           <div class="carousel-item">
             <div class="d-flex justify-content-center"> 
               <div class="card-img" style="width: 800px; height: 400px; margin: 50px;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                <img src="hux/hibrida.jpg" alt="Híbrida Imagem">
                 <div class="card__content" title="Topologia em Estrela">
                   <p class="card__title">
                     Híbrida
                   </p>
-                  <p class="card__description">
+                  <p class="card__description" style="text-align: justify;">
                     De forma resumida se trata de mais de uma topologia em conjunto, havendo um ponto central (hub ou switch) que conecta duas ou mais topologias físicas distintas - ou seja, os padrões de conexão variam de acordo com a necessidade do cliente.
                   <br><br>
                   A topologia Híbrida apresenta algumas desvantagens, como a complexidade de implementação, considerando que é necessário um planejamento até a aplicação - isso porque se um dispositivo for conectado de forma errada, pode afetar o sistema todo - outro problema seria a possibilidade de incompatibilidade dos equipamentos com a forma de conexão - considerando, por exemplo, que uma parte da rede pode ser baseada em uma topologia em estrela que requer comutadores, enquanto outra parte pode ser em anel, que requer dispositivos de rede diferentes.
                   <br><br>
-                  A sua utilização surge da demanda de adaptar a necessidade da estratégia de negócio e de aproveitar o custo/benefício entre as topologias envolvidas. Por exemplo: uma grande empresa que possui diferentes departamentos com requisitos diferentes de rede, onde um setor teria um custo-benefício maior se fosse feito em topologia de estrela e o setor da TI tendo um Data Center que precisa da topologia de malha, com um laboratório que seria mais vantajoso ter uma topologia de barramento.
+                  A sua utilização surge da demanda de adaptar a necessidade da estratégia de negócio e de aproveitar o custo/benefício entre as topologias envolvidas. Por exemplo: uma grande empresa que possui diferentes departamentos com requisitos diferentes de rede, onde um setor teria um custo-benefício maior se fosse feito em topologia de estrela e o setor da TI tendo um Data Center que precisa da topologia de malha, com um laboratório que seria mais vantajoso ter uma topologia de barramento.
                   </p>
                 </div>
               </div>
@@ -535,5 +534,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./hux/my.js"></script>
-  </body>
+  </body>
 </html>
