@@ -118,3 +118,35 @@ function lerMais() {
 
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+// Define an array of section IDs to be used for the buttons
+const sectionIDs = ['home', 'camadas', 'camadasTcp', 'topolog'];
+
+// Function to set the active button based on the center of the screen
+function setActiveButton() {
+  const windowHeight = window.innerHeight;
+  const scrollCenter = window.scrollY + windowHeight / 2;
+
+  for (const sectionID of sectionIDs) {
+    const section = document.getElementById(sectionID);
+    if (!section) continue;
+
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    const button = document.querySelector(`.button[data-section="${sectionID}"]`);
+    if (button) {
+      if (scrollCenter >= sectionTop && scrollCenter <= sectionTop + sectionHeight) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    }
+  }
+}
+
+// Initial call to set the active button when the page loads
+setActiveButton();
+
+// Listen for the scroll event and update the active button
+window.addEventListener('scroll', setActiveButton);

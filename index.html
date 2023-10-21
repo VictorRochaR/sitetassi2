@@ -26,18 +26,19 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <button class="N1 button active" onclick="scrollToSection('home', 100)"></button>
+              <button class="N1 button active" data-section="home" onclick="scrollToSection('home', 100)"></button>
             </li>
             <li class="nav-item">
-              <button class="N2 button" onclick="scrollToSection('camadas', 100)"></button>
+              <button class="N2 button" data-section="camadas" onclick="scrollToSection('camadas', 100)"></button>
             </li>
             <li class="nav-item">
-              <button class="N3 button" onclick="scrollToSection('camadasTcp', 100)"></button>
+              <button class="N3 button" data-section="camadasTcp" onclick="scrollToSection('camadasTcp', 100)"></button>
             </li>
             <li class="nav-item">
-              <button class="N4 button" onclick="scrollToSection('topolog', 100)"></button>
+              <button class="N4 button" data-section="topolog" onclick="scrollToSection('topolog', 100)"></button>
             </li>
-          </ul>
+        </ul>
+        
         </div>
       </div>
     </nav>
@@ -273,6 +274,46 @@
                     Desta forma, é considerada como um tipo de rede confiável, visto que, caso um equipamento - fora o ponto central - falhe, este não comprometerá a comunicação e, se um cabo for rompido apenas a comunicação do dispositivo conectado a ele será interrompida.
                     <br><br>
                     Um exemplo claro da Estrela são as redes domésticas, nas quais há um roteador como ponto central e equipamentos conectados a ele (via cabo ou Wifi).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center"> 
+              <div class="card-img" style="width: 800px; height: 400px; margin: 50px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                <div class="card__content" title="Topologia em Estrela">
+                  <p class="card__title">
+                    Malha
+                  </p>
+                  <p class="card__description">
+                    A topologia mesh, também conhecida como malha é uma estrutura onde todos os dispositivos estão conectados entre si, garantindo que independente qual ponto ou equipamento tenha falha, a comunicação será estabelecida. Nessa topologia existem malhas completas (todos os dispositivos se conectam a todos os outros dispositivos) e malhas parciais (apenas alguns dispositivos se conectam a todos os outros).
+                  <br><br>
+                  Suas desvantagens estão no custo, mobilidade e escalabilidade, considerando que para cada equipamento adicionado é necessário conectar com todos os outros na estrutura, mas a vantagem certamente está na confiança de comunicação, pois se uma das conexões é cortada, o sistema no geral não é afetado pois há outras conexões para o transporte de dados.
+                  <br><br>
+                  É uma topologia usada em ambientes específicos que necessitam da garantia de comunicação constante, como por exemplo um Data Center de uma empresa, considerando que se ele parar por um tempo, o menor que seja, toda a empresa é afetada.
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center"> 
+              <div class="card-img" style="width: 800px; height: 400px; margin: 50px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+                <div class="card__content" title="Topologia em Estrela">
+                  <p class="card__title">
+                    Híbrida
+                  </p>
+                  <p class="card__description">
+                    De forma resumida se trata de mais de uma topologia em conjunto, havendo um ponto central (hub ou switch) que conecta duas ou mais topologias físicas distintas - ou seja, os padrões de conexão variam de acordo com a necessidade do cliente.
+                  <br><br>
+                  A topologia Híbrida apresenta algumas desvantagens, como a complexidade de implementação, considerando que é necessário um planejamento até a aplicação - isso porque se um dispositivo for conectado de forma errada, pode afetar o sistema todo - outro problema seria a possibilidade de incompatibilidade dos equipamentos com a forma de conexão - considerando, por exemplo, que uma parte da rede pode ser baseada em uma topologia em estrela que requer comutadores, enquanto outra parte pode ser em anel, que requer dispositivos de rede diferentes.
+                  <br><br>
+                  A sua utilização surge da demanda de adaptar a necessidade da estratégia de negócio e de aproveitar o custo/benefício entre as topologias envolvidas. Por exemplo: uma grande empresa que possui diferentes departamentos com requisitos diferentes de rede, onde um setor teria um custo-benefício maior se fosse feito em topologia de estrela e o setor da TI tendo um Data Center que precisa da topologia de malha, com um laboratório que seria mais vantajoso ter uma topologia de barramento.
                   </p>
                 </div>
               </div>

@@ -281,7 +281,13 @@ a:hover{
   line-height: 1.4;
 }
 
-#more {display: none;}
+#more {
+  display: none;
+}
+
+.navbar-toggler{
+  background-color: white;
+}
 @media (max-width: 767px) {
   .camadas{
     width: 100vw;
