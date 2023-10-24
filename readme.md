@@ -9,6 +9,9 @@ Confira o protótipo do site no Figma: [Protótipo](https://www.figma.com/commun
 ## Demonstração
 
 Você pode visualizar o site ao vivo no GitHub Pages: [Site](https://victorrochar.github.io/sitetassi2/)
+| <img src="https://files.taskade.com/attachments/7508f062-e326-4835-a04a-a8f0e67d6e30/original/imagem_2023-10-24_161352871.png" /> | <img src="https://files.taskade.com/attachments/b1453b5f-976c-4663-9690-81fd0ec851ec/original/imagem_2023-10-24_161409970.png" />  |
+| ----- | ----- |
+| <p align="center">Home</p> | <p align="center">Home 2</p> |
 
 ## Contatos
 
