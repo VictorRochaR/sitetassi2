@@ -289,6 +289,10 @@ a:hover{
   display: none;
 }
 
+.someDaq2{
+  display: none;
+}
+
 .navbar-toggler{
   background-color: white;
 }
@@ -310,7 +314,13 @@ a:hover{
   #someDaq{
     display: none;
   }
+  .someDaq{
+    display: none;
+  }
   #someDaq2{
+    display: block;
+  }
+  .someDaq2{
     display: block;
   }
   .block-title{

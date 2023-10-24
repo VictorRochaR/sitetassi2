@@ -384,7 +384,72 @@
 
     <div id="topolog">
       <h1 class="text-center text-white" style="margin-top: 100px; margin-bottom: 50px; font-size: 50px;"> Topologias de Rede </h1>
-      <div id="carouselExampleIndicators" class="carousel slide">
+      <div id="topoSome" class="accordion someDaq2" style="margin-bottom: 50px;">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Barramento Linear
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#topoSome">
+            <div class="accordion-body">
+              Todos os equipamentos compartilham uma única conexão para se comunicar - de maneira bidirecional - uma falha no cabo pode afetar o sinal elétrico da rede e comprometer toda a estrutura, sendo muito vulnerável a problemas. Quem emite a mensagem avalia a fila de entrega da estrutura e, uma vez vazia é iniciada a transmissão - visto que apenas um equipamento é permitido transmitir por vez.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Anel
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#topoSome">
+            <div class="accordion-body">
+              Todos os dispositivos são conectados em formato circular através de um circuito fechado (ligados pelas pontas), seguindo os mesmos problemas da rede de barramento, ou seja, uma falha em uma máquina interrompe a comunicação total da rede.
+              Esta topologia permite que apenas um dispositivo comunique por vez e, na variação da rede anel o dispositivo com posse do token ring transmite dados de maneira unidirecional para todos os outros.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Estrela
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#topoSome">
+            <div class="accordion-body">
+              Neste tipo de rede, os dispositivos são conectados a um ponto central, mas não diretamente entre si, isto é, quando um dispositivo envia dados, estes são transmitidos para o hub ou switch central e, em seguida, encaminhados para o dispositivo destinatário.
+              A topologia em Estrela também possui a variação conhecida como Estrela Estendida, a qual conecta várias estrelas entre si ao hub central por meio de suas ramificações, permitindo ainda mais conexões em apenas uma estrutura.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Malha
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#topoSome">
+            <div class="accordion-body">
+              A topologia mesh, também conhecida como malha é uma estrutura onde todos os dispositivos estão conectados entre si, garantindo que independente qual ponto ou equipamento tenha falha, a comunicação será estabelecida. Nessa topologia existem malhas completas (todos os dispositivos se conectam a todos os outros dispositivos) e malhas parciais (apenas alguns dispositivos se conectam a todos os outros).
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFour">
+              Híbrida
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#topoSome">
+            <div class="accordion-body">
+              De forma resumida se trata de mais de uma topologia em conjunto, havendo um ponto central (hub ou switch) que conecta duas ou mais topologias físicas distintas - ou seja, os padrões de conexão variam de acordo com a necessidade do cliente.
+              A topologia Híbrida apresenta algumas desvantagens, como a complexidade de implementação e a possibilidade de incompatibilidade dos equipamentos com a forma de conexão.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide someDaq">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
