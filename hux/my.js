@@ -1,7 +1,7 @@
 const contentData = [
     {
         title: "Modelo Osi",
-        content: "No modelo OSI os protocolos são agrupados em 7 camadas, iniciando sempre pela camada inferior.<br/><img src='./hux/osiimg.png' alt='OSI_camadas'>"
+        content: "O modelo “Open System Interconnection” é um modelo de camadas de rede criado in 1984 pela ISO ('International Organization for Standardization') para proporcionar a interconexão de sistemas abertos, visando a inoperabilidade do sistema em questão.<br/><br/>No modelo OSI, os protocolos são agrupados em 7 camadas, iniciando sempre pela camada inferior."
     },
     {
         title: "7. Aplicação",
@@ -29,7 +29,7 @@ const contentData = [
     },
     {
         title: "1. Física",
-        content: "Define meios de transmissão para realizar a transmissão de dados brutos entre o dispositivo e o meio físico. Desta forma, ao receber uma informação do meio físico, ela converte o sinal em bits digitais e os encaminha à camada de Enlace de Dados.além detectar erros na transmissão.<br/><br/>Principais protocolos envolvidos: Wi-fi, Bluetooth, HDMI, USB, entre outros."
+        content: "Define meios de transmissão para realizar a transmissão de dados brutos entre o dispositivo e o meio físico. Desta forma, ao receber uma informação do meio físico, ela converte o sinal em bits digitais e os encaminha à camada de Enlace de Dados - além detectar erros na transmissão.<br/><br/>Principais protocolos envolvidos: Wi-fi, Bluetooth, HDMI, USB, entre outros."
     }
     // Add more data for other cards
 ];
@@ -94,7 +94,7 @@ $('area[data-maphilight]').mouseout(function () {
 const section = document.getElementById(sectionId);
 
 if (section) {
-    const offsetPosition = section.offsetTop.offset;
+    const offsetPosition = section.offsetTop - offset;
     window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
