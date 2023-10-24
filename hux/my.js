@@ -1,7 +1,7 @@
 const contentData = [
     {
-        title: "Modelo Osi",
-        content: "O modelo “Open System Interconnection” é um modelo de camadas de rede criado in 1984 pela ISO ('International Organization for Standardization') para proporcionar a interconexão de sistemas abertos, visando a inoperabilidade do sistema em questão.<br/><br/>No modelo OSI, os protocolos são agrupados em 7 camadas, iniciando sempre pela camada inferior."
+        title: "Modelo OSI",
+        content: "No modelo OSI, os protocolos são agrupados em 7 camadas, iniciando sempre pela camada inferior.<br/><img src='./hux/osiimg.png' alt='OSI_camadas'>"
     },
     {
         title: "7. Aplicação",
